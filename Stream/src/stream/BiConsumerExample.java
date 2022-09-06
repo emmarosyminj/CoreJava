@@ -10,11 +10,11 @@ public class BiConsumerExample implements BiConsumer<String, Integer> {
 	}
 	
 	public static void main(String[] arrgs) {
-		BiConsumer<String, Integer> biConsumer = new BiConsumerExample();
+		BiConsumer<String, Integer> biConsumer = new BiConsumerExample();  // traditional approach
 		biConsumer.accept("Emma", 5000);
 		
 		
-		BiConsumer<String, Integer> biConsumer1 = new BiConsumer<String, Integer>(){
+		BiConsumer<String, Integer> biConsumer1 = new BiConsumer<String, Integer>(){  //annonymous approach
 
 			@Override
 			public void accept(String i1, Integer i2) {
