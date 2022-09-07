@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class StreamListSort {
 	
@@ -49,6 +51,13 @@ public class StreamListSort {
         employee.stream().sorted(Comparator.comparing(emp-> emp.getSalary())).forEach(System.out::println); //optomize the lamda
         
         employee.stream().sorted(Comparator.comparing(Employee::getName)).forEach(System.out::println);   //method reference
+
+        System.out.println("99999999999999");
+        //employee.stream().sorted(Comparator.comparing(Employee::getName).).s.forEach(System.out::println);
+        
+        // find employees whose salaries are above 60000 and name starts with B
+        employee.stream().filter(emp->emp.getSalary() > 600000 && emp.getName().startsWith("B") ).forEach(System.out::println);
+        //Employee [id=388, name=Bikash, dept=CIVIL, salary=900000]
 	}
 }
 /*
